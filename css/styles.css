@@ -1,0 +1,81 @@
+body {
+	font-family: 'Lato', sans-serif; 
+}
+
+.navbar-header {
+	background-color: #333;
+}
+
+h1 {
+	text-transform: uppercase;
+	color: #333;
+	text-align: center;
+	font-weight: 700;
+}
+
+h2 {
+	text-transform: uppercase;
+	color: #555;
+	text-align: center;
+	font-weight: 700;
+}
+
+p {
+	color: #555;
+	font-weight: 500;
+	text-align: center;
+	width: 90%;
+	margin: 0 auto 15px;
+}
+
+.section-ppt  {
+	height: 200px;
+	background: #32ffe0; /* Old browsers */
+	background: -moz-linear-gradient(-45deg, #32ffe0 0%, #106fbe 45%, #21394a 87%); /* FF3.6-15 */
+	background: -webkit-linear-gradient(-45deg, #32ffe0 0%,#106fbe 45%,#21394a 87%); /* Chrome10-25,Safari5.1-6 */
+	background: linear-gradient(135deg, #32ffe0 0%,#106fbe 45%,#21394a 87%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#32ffe0', endColorstr='#21394a',GradientType=1 );
+}
+.section-ppt span {
+	position: absolute;
+	color: white;
+	opacity: .2;    
+	font-size: 18em;
+    right: -8%;
+    margin-top: -79px;
+}
+.section-ppt img {
+	position: absolute;
+	position: absolute;
+    width: 60%;
+    left: 5%;
+    margin-top: 17px;
+}
+.section-2 .section-ppt img{
+	left: 0;
+}
+
+.video-explain {
+	width: 100%;
+	height: auto;
+}
+
+.item {
+	background: #eee;
+}
+
+.item h3 {
+	text-align: center;
+}
+
+.carousel-inner > .item > img,
+  .carousel-inner > .item > a > img {
+      width: 100%;
+      margin: auto;
+}
+.carousel-control.right {
+	background: none;
+}
+.carousel-control.left {
+	background: none;
+}

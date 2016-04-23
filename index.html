@@ -9,6 +9,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
     <link rel="icon" href="../../favicon.ico">
+    <link href='https://fonts.googleapis.com/css?family=Lato:400,700,900,400italic,900italic,700italic' rel='stylesheet' type='text/css'>
 
     <title>AirChecker Colombia</title>
     
@@ -16,6 +17,10 @@
     <!-- Bootstrap -->
 	<link rel="stylesheet" href="css/bootstrap.min.css">
 	<link rel="stylesheet" href="css/bootstrap-theme.min.css">
+	<link rel="stylesheet" href="css/styles.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+    
 
   </head>
 
@@ -23,6 +28,7 @@
 
    <nav class="navbar navbar-default">
 	  <div class="container">
+
 	    <div class="navbar-header">
 	      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="true">
 	        <span class="sr-only">Toggle navigation</span>
@@ -30,12 +36,16 @@
 	        <span class="icon-bar"></span>
 	        <span class="icon-bar"></span>
 	      </button>
+
+	       <a class="navbar-brand" href="#">
+	        <img alt="Brand" src="img/LogoLogin.svg">
+	      </a>
 	    </div>
 
 	    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 	      <ul class="nav navbar-nav">
 	        <li>
-	        	<a href="#">Home</a>
+	        	<a href="#" class="active">Home</a>
 	        </li>
 	        <li>
 	        	<a href="#">Reporting</a>
@@ -48,11 +58,108 @@
 	  </div>
 	</nav>
 
+
     <div class="container">
-    	<div class="row"> aqui comenzamos el contenido</div>
+    	<section class="row">
+    		<!--<video class="video-explain">
+    			 <source src="https://youtu.be/ScMzIvxBSi4" type="video/mp4">
+				  <source src="mov_bbb.ogg" type="video/ogg">
+				  Your browser does not support HTML5 video.
+
+    		</video>-->
+    		<img src="http://placehold.it/1280x765" class="video-explain">
+    	</section>
+
+    	<section class="row">
+  			<div class="section-ppt">
+    			<img src="img/imagenppt1.png" alt="airchecker">
+    			<span>1</span>
+    		</div>
+    		<h1>AirChecker Colombia</h1>
+    		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+    		tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+    		quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo</p>
+    	</section>
+
+    	<section class="row section-2">
+  			<div class="section-ppt">
+    			<span>2</span>
+    			<img src="img/imagenppt2.png" alt="airchecker">
+    		</div>
+    		<h2>Quén usa la app?</h2>
+    		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+    		tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+    		quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo</p>
+    	</section>
+
+	  <div id="myCarousel" class="carousel slide row" data-ride="carousel">
+	  		<div class="section-ppt">
+    			<img src="img/logo.png" alt="airchecker">
+    			<span>3</span>
+    		</div>
+	  <h2>Conóce la Aplicación</h2>
+	    <!-- Indicators -->
+	    <ol class="carousel-indicators">
+	      <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+	      <li data-target="#myCarousel" data-slide-to="1"></li>
+	      <li data-target="#myCarousel" data-slide-to="2"></li>
+	    </ol>
+
+	    <!-- Wrapper for slides -->
+	    <div class="carousel-inner" role="listbox">
+	      <div class="item active">
+	        	<div class="">
+		    		<h3>Reportes</h3>  	
+			    	<p >
+			    		Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+			    		tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+			    		quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+			    	</p>
+		    	</div>
+		    	<div >
+		    		<img src="http://placehold.it/320x480" >
+		    	</div>
+	      </div>
+
+	      <div class="item">
+	        	<div>
+		    		<h3>Reportes</h3>  	
+			    	<p >
+			    		Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+			    		tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+			    		quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+			    	</p>
+		    	</div>
+		    	<div >
+		    		<img src="http://placehold.it/320x480" >
+		    	</div>
+	      </div>
+	    
+	      <div class="item">
+	        	<div>
+		    		<h3>Reportes</h3>  	
+			    	<p >
+			    		Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+			    		tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+			    		quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+			    	</p>
+		    	</div>
+		    	<div >
+		    		<img src="" >
+		    	</div>
+	      </div>
+	    </div>
+
+	    <!-- Left and right controls -->
+	    <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+	      <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+	      <span class="sr-only">Previous</span>
+	    </a>
+	    <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+	      <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+	      <span class="sr-only">Next</span>
+	    </a>
+	  </div>
     </div>
-
-
-    <script src="js/bootstrap.min.js"></script>
   </body>
 </html>
