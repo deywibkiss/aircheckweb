@@ -217,6 +217,7 @@ section {
 }
 .know-more img {
 	width: 50px;
+	border-radius: 50%;
 }
 
 @media screen and (min-width: 768px) {
@@ -236,4 +237,26 @@ section {
 		padding: 0 15px;
 	}
 
+}
+.reports {
+	padding-top: 0;
+	margin-top: -20px;
+}
+.reports li {
+	width: 80%;
+	margin-left: 30px;
+	border-bottom: solid 1px #888;
+}
+.reports li:last-child {
+	border-bottom: none;
+}
+
+.graph-tittle h4 {
+	text-align: center;
+} 
+
+.graph-content {
+	width: 300px;
+	height: 300px;
+	box-shadow: 0px 0px 5px #eee;
 }
