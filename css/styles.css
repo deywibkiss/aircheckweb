@@ -254,9 +254,3 @@ section {
 .graph-tittle h4 {
 	text-align: center;
 } 
-
-.graph-content {
-	width: 300px;
-	height: 300px;
-	box-shadow: 0px 0px 5px #eee;
-}
