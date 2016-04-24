@@ -1,24 +1,78 @@
 [
-  ['Puente Aranda', 124],
-  ['Fontibon',66],
-  ['Kennedy',42],
-  ['Los Mártires',41],
-  ['Engativá',41],
-  ['Barrios Unidos',34],
-  ['Usaquén',19],
-  ['Suba',17],
-  ['Teusaquillo',17],
-  ['Antonio Nariño',16],
-  ['Chapinero',14],
-  ['Santa fe',8],
-  ['Rafael Uribe',7],
-  ['Tunjuelito',7],
-  ['Bosa',6],
-  ['San Cristobal',5],
-  ['Ciudad Bolivar',5],
-  ['Usme',2],
-  ['Candelaria',2]
-  
-  
-  
+  [
+    "Puente Aranda",
+    124
+  ],
+  [
+    "Fontibon",
+    66
+  ],
+  [
+    "Kennedy",
+    42
+  ],
+  [
+    "Los Martires",
+    41
+  ],
+  [
+    "Engativa",
+    41
+  ],
+  [
+    "Barrios Unidos",
+    34
+  ],
+  [
+    "Usaquen",
+    19
+  ],
+  [
+    "Suba",
+    17
+  ],
+  [
+    "Teusaquillo",
+    17
+  ],
+  [
+    "Antonio Narinno",
+    16
+  ],
+  [
+    "Chapinero",
+    14
+  ],
+  [
+    "Santa fe",
+    8
+  ],
+  [
+    "Rafael Uribe",
+    7
+  ],
+  [
+    "Tunjuelito",
+    7
+  ],
+  [
+    "Bosa",
+    6
+  ],
+  [
+    "San Cristobal",
+    5
+  ],
+  [
+    "Ciudad Bolivar",
+    5
+  ],
+  [
+    "Usme",
+    2
+  ],
+  [
+    "Candelaria",
+    2
   ]
+]
