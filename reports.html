@@ -9,6 +9,10 @@
 	<script language="javascript" type="text/javascript" src="js/flot/jquery.flot.time.js"></script>
 	<script language="javascript" type="text/javascript" src="js/flot/jquery.flot.selection.js"></script>
 
+	<script type="text/javascript"
+           src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAr9JaJNwAqeHGkLUr2qq-Quo1xAK8FLG4&libraries=visualization">
+       </script>
+
 
 	
     <link rel="stylesheet" type="text/css" href="css/reportes.css">
@@ -160,6 +164,18 @@ input[type=checkbox] {
 
 
 <!-- parte graficas de visualización daya-->
+		
+		<div class="demo-container"
+			<div id="map" style="width: 800px; height: 600px;"></div>
+
+			<button class="btn-product" id="MODIS_Terra_Cloud_Top_Temp_D">Temperatura de las Nubes</button>
+			<button class="btn-product" id="MODIS_Terra_Aerosol">Aereosol</button>
+			<button class="btn-product" id="MLS_CO_215hPa_Day">Dióxido de Carbono</button>
+			<button class="btn-product" id="MLS_HNO3_46hPa_Day">Ácido Nítrico</button>
+			<button class="btn-product" id="AIRS_Precipitation_Day">Precipitación</button>
+			<button class="btn-product" id="AMSR2_Wind_Speed_Day">Velocidad del viento</button>
+
+		</div>
 
 		<div class="demo-container">
 			<div id="placeholder" class="demo-placeholder"></div>
@@ -169,9 +185,25 @@ input[type=checkbox] {
 			<div id="placeholder2" class="demo-placeholder"></div>
 		</div>
 
+		
+
 <script type="text/javascript">
 
 	$(function() { 
+
+
+		//********************MAPA****************************************
+
+		product = "MODIS_Terra_Aerosol";
+		pintarNASA(product);
+
+		$('.btn-product').click(function(){
+			pintarNASA(this.id);
+		});
+	    
+
+    //***************************************************
+
 
 		var request = $.ajax({
 		  url: "http://aircheck.cloudapp.net:8080/stadistic",
@@ -199,9 +231,47 @@ input[type=checkbox] {
 		});
 		 
 		request.fail(function( jqXHR, textStatus ) {
-		  alert( "Request failed: " + textStatus );
+		  console.log( "Request failed: " + textStatus );
 		});
 
+		function pintarNASA(product){
+			
+			var mapOptions = {
+		        center: new google.maps.LatLng(4.6, -74.0),
+		        zoom: 5,
+		        maxZoom: 6
+		    };
+
+		    var map = new google.maps.Map(document.getElementById("map"), mapOptions);
+
+		    var getTileUrl = function(tile, zoom) {
+
+	    		var hoy = new Date();
+				var mes = ("0" + (hoy.getMonth() + 1)).slice(-2)
+
+				var url = "//map1.vis.earthdata.nasa.gov/wmts-webmerc/" +
+		               product + "/default/" + hoy.getFullYear() + "-"+mes+"-" + (hoy.getDate()-1) + "/" +
+		               "GoogleMapsCompatible_Level6/" +
+		                5 + "/" + tile.y + "/" +
+		                tile.x + ".png";
+
+		        return url;
+		    };
+
+		    var layerOptions = {
+		        alt: "MODIS_Terra_Aerosol",
+		        getTileUrl: getTileUrl,
+		        maxZoom: 6,
+		        minZoom: 1,
+		        name: "MODIS_Terra_Aerosol",
+		        tileSize: new google.maps.Size(256, 256),
+		        opacity: 0.5
+		    };
+
+		    var imageMapType = new google.maps.ImageMapType(layerOptions);
+		    map.overlayMapTypes.insertAt(0, imageMapType);
+
+		}
 
 		function pintar(json){
 
@@ -251,6 +321,9 @@ input[type=checkbox] {
 				}
 			});
 		}
+
+
+
    });
 
    </script>
