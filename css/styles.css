@@ -254,3 +254,52 @@ section {
 .graph-tittle h4 {
 	text-align: center;
 } 
+
+.motivation-content h2 {
+	text-align: left;
+	width: 85%;
+	margin: 0 auto;
+}
+
+.motivation-content ul {
+	text-align: left;
+	width: 85%;
+	margin: 0 auto;
+}
+.motivation-content mark {
+	text-align: left;
+	width: 95%;
+	margin: 0 auto;
+	display: block;
+}
+.motivation-content h5 {
+	text-align: left;
+	width: 85%;
+	margin: 0 auto;
+}
+.motivation-content h3 {
+	text-align: left;
+	width: 85%;
+	margin: 0 auto;
+}
+.motivation-content p {
+	text-align: left;
+	margin-top: 5px;
+}
+.motivation-content a {
+	width: 85%;
+	font-size: 1em;
+}
+
+
+@media screen and (min-width: 768px) {
+	.motivation-content p {
+		font-size: 1.2em;
+	}
+}
+.motivation-content ul {
+	background: #eee;
+	padding-right: 5px;
+	padding-top: 8px;
+	padding-bottom: 8px;
+}
