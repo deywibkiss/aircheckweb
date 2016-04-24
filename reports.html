@@ -182,6 +182,11 @@ input[type=checkbox] {
 	<div class="demo-container">
 		<div id="placeholder2" class="demo-placeholder"></div>
 	</div>
+</div>
+<div class="container">
+	<div class="demo-container">
+		<div id="placeholder3" class="demo-placeholder"></div>
+	</div>
 
 	<script type="text/javascript">
 
@@ -224,6 +229,20 @@ input[type=checkbox] {
 			 
 			request.done(function( json ) {
 			  pintar2(json)
+			});
+			 
+			request.fail(function( jqXHR, textStatus ) {
+			  console.log( "Request failed: " + textStatus );
+			});
+
+			var request = $.ajax({
+			  url: "http://aircheck.cloudapp.net/aircheckweb/establecimientos.json",
+			  method: "GET",
+			  dataType: "json"
+			});
+			 
+			request.done(function( json ) {
+			  pintar3(json)
 			});
 			 
 			request.fail(function( jqXHR, textStatus ) {
@@ -304,6 +323,28 @@ input[type=checkbox] {
 				console.log(result);
 
 				$.plot("#placeholder2", [ result ], {
+					series: {
+						bars: {
+							show: true,
+							barWidth: 0.6,
+							align: "center"
+						}
+					},
+					xaxis: {
+						mode: "categories",
+						tickLength: 0
+					}
+				});
+			}
+
+			function pintar3(json){
+
+				var result = json
+
+				var data = [ ["January", 10], ["February", 8], ["March", 4], ["April", 13], ["May", 17], ["June", 9] ];
+				console.log(result);
+
+				$.plot("#placeholder3", [ result ], {
 					series: {
 						bars: {
 							show: true,
