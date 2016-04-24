@@ -1,0 +1,15 @@
+.bar.fire {
+	display: inline-block;
+	width: 20px;
+	height: 75px;   /* Esto se cambiará próximamente */
+	background-color: red;
+	margin-right: 2px;
+}
+
+.bar.cough {
+	display: inline-block;
+	width: 20px;
+	height: 75px;   /* Esto se cambiará próximamente */
+	background-color: blue;
+	margin-right: 2px;
+}
