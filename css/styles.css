@@ -2,9 +2,6 @@ body {
 	font-family: 'Lato', sans-serif; 
 }
 
-.navbar-header {
-	background-color: #333;
-}
 
 h1 {
 	text-transform: uppercase;
@@ -21,13 +18,39 @@ h2 {
 }
 
 p {
+	font-weight: 500;
 	color: #555;
 	font-weight: 500;
 	text-align: center;
-	width: 90%;
+	width: 85%;
 	margin: 0 auto 15px;
 }
+@media screen and (min-width: 768px) {
+	p {
+		font-size: 1.8em;
+	}
+	h2 {
+		font-size: 3em;
+    	margin-bottom: 24px;
+	}
+}
 
+hr {
+	width: 20px;
+	height: 3px;
+	background-color: #32ffe0;
+}
+section {
+	margin-top: 20px;
+	margin-bottom: 20px;
+}	
+
+.content-img {
+	width: 60%;
+	margin: 0 auto;
+	text-align: center;
+	display: block;
+}
 .section-ppt  {
 	height: 200px;
 	background: #32ffe0; /* Old browsers */
@@ -36,6 +59,7 @@ p {
 	background: linear-gradient(135deg, #32ffe0 0%,#106fbe 45%,#21394a 87%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#32ffe0', endColorstr='#21394a',GradientType=1 );
 }
+
 .section-ppt span {
 	position: absolute;
 	color: white;
@@ -46,12 +70,40 @@ p {
 }
 .section-ppt img {
 	position: absolute;
-	position: absolute;
     width: 60%;
     left: 5%;
     margin-top: 17px;
 }
-.section-2 .section-ppt img{
+
+@media screen and (min-width: 768px) {
+	.section-ppt {
+		height: 450px;
+	}
+
+	.section-ppt span {
+	    font-size: 38em;
+		right: -8%;
+		margin-top: -170px;
+	}
+}
+
+@media screen and (min-width: 1024px) {
+	.section-ppt {
+		height: 460px;
+	}
+
+	.section-ppt span {
+	    font-size: 40em;
+		right: 3%;
+		margin-top: -170px;
+	}
+
+	.section-ppt img {
+		width: 34%;
+	}
+}
+
+.part-2 .section-ppt img{
 	left: 0;
 }
 
@@ -62,20 +114,126 @@ p {
 
 .item {
 	background: #eee;
+	height: auto;
+	-webkit-transition: 3.6s ease-in-out left;
+    -moz-transition: 3.6s ease-in-out left;
+    -o-transition: 3.6s ease-in-out left;
+    transition: 3.6s ease-in-out left;
+}
+
+.image-slides {
+	padding: 32px 0;
+	background: #333;
 }
 
 .item h3 {
 	text-align: center;
+	padding-top: 8px;
 }
 
-.carousel-inner > .item > img,
-  .carousel-inner > .item > a > img {
-      width: 100%;
-      margin: auto;
+.item img {
+	margin: 0 auto;
+	display: block;
+	width: 70%;
+	box-shadow: 0px 0px 5px #333;
+}
+
+@media screen and (min-width: 768px) {
+	.image-slides {
+		width: 55%;
+		float: left;
+	}
+	.content-slides {
+		width: 42%;
+		float: right;
+	}
+	.item h3 {
+		text-align: left;
+		font-size: 2.8em;
+		width: 85%;
+		margin: 0 auto 15px;
+	}
+	.item p {
+		text-align: left;
+		font-size: 2.2em;
+	}
+}
+
+@media screen and (min-width: 1024px) {
+	.image-slides {
+		width: 30%;
+	}
+	.content-slides {
+		width: 70%;
+		float: right;
+	}
+}
+
+.carousel-control {
+	bottom: 0;
 }
 .carousel-control.right {
 	background: none;
 }
 .carousel-control.left {
 	background: none;
+}
+
+.carousel-indicators {
+	bottom: 0;
+}
+
+@media screen and (min-width: 768px) {
+	.carousel {
+		width: 70%;
+		margin: 0 auto;
+	}
+}
+
+.know-more {
+	margin: 0 auto;
+	text-align: center;
+	padding-bottom: 15px;
+	background: #eee;
+}
+.know-more h2 {
+	font-weight:900;
+	font-size: 1.5em;
+}
+
+.know-more ul {
+	-webkit-margin-before: 0em;
+    -webkit-margin-after: 0em;
+    -webkit-padding-start: 0px;
+}
+.know-more li {
+	padding: 0 10px;
+}
+
+.know-more nav li {
+	list-style-type: none;
+	display: inline-block;
+	
+}
+.know-more img {
+	width: 50px;
+}
+
+@media screen and (min-width: 768px) {
+	.know-more h2 {
+		font-size: 3em;
+	}
+
+	.know-more img {
+		width: 70px;
+	}
+
+	.more-spaceapps img {
+		width: 100px;
+	}
+
+	.know-more li {
+		padding: 0 15px;
+	}
+
 }
