@@ -187,7 +187,7 @@ input[type=checkbox] {
 	<div class="demo-container">
 		<div id="placeholder3" class="demo-placeholder"></div>
 	</div>
-
+<div>
 	<script type="text/javascript">
 
 		$(function() { 
@@ -340,8 +340,6 @@ input[type=checkbox] {
 			function pintar3(json){
 
 				var result = json
-
-				var data = [ ["January", 10], ["February", 8], ["March", 4], ["April", 13], ["May", 17], ["June", 9] ];
 				console.log(result);
 
 				$.plot("#placeholder3", [ result ], {
@@ -363,7 +361,6 @@ input[type=checkbox] {
 	    <script>
 	    	//d3.json("http://aircheck.cloudapp.net:8080/stadistic",draw);
 	    </script>
-</div>
 
 </body>
 </html>
