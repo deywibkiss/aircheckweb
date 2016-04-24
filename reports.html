@@ -189,7 +189,7 @@ input[type=checkbox] {
 
 
 		var request = $.ajax({
-		  url: "http://aircheck.cloudapp.net:8080/report",
+		  url: "http://127.0.0.1/aircheckweb/document.json",
 		  method: "GET",
 		  dataType: "json"
 		});
@@ -206,7 +206,7 @@ input[type=checkbox] {
 		function pintar(json){
 
 
-			result = [];
+			var result = [];
 			for (var i = json.length - 1; i >= 0; i--) {
 				
 				var a = [ json[i]['subtype'], json[i]['count'] ]; 
@@ -214,8 +214,7 @@ input[type=checkbox] {
 			}
 
 			var data = [ ["January", 10], ["February", 8], ["March", 4], ["April", 13], ["May", 17], ["June", 9] ];
-			console.log(result);
-
+			
 			$.plot("#placeholder", [ result ], {
 				series: {
 					bars: {
@@ -233,18 +232,12 @@ input[type=checkbox] {
 
 		function pintar2(json){
 
-
-			result = [];
-			for (var i = json.length - 1; i >= 0; i--) {
-				
-				var a = [ json[i]['subtype'], json[i]['count'] ]; 
-				result.push(a);
-			}
+			var result = json
 
 			var data = [ ["January", 10], ["February", 8], ["March", 4], ["April", 13], ["May", 17], ["June", 9] ];
 			console.log(result);
 
-			$.plot("#placeholder", [ result ], {
+			$.plot("#placeholder2", [ result ], {
 				series: {
 					bars: {
 						show: true,
