@@ -1,7 +1,11 @@
 body {
 	font-family: 'Lato', sans-serif; 
+	background: #555;
 }
 
+.container{
+	background: #fff;
+}
 
 h1 {
 	text-transform: uppercase;
@@ -41,15 +45,23 @@ hr {
 	background-color: #32ffe0;
 }
 section {
-	margin-top: 20px;
 	margin-bottom: 20px;
+}
+
+.product-buttons {
+	text-align: center;
+	width: 100%;
+	padding: 15px;
+	background-color: #eee;
 }
 
 .navbar-brand img {
 	width: 145px;
     margin-top: -17px;
 }	
-
+.navbar {
+	margin-bottom: 0;
+}
 .content-img {
 	width: 100%;
 	margin: 0 auto;
@@ -60,6 +72,9 @@ section {
 	.content-img {
 		width: 60%;
 	}
+} 
+.video-container {
+	background: black;
 }
 .section-ppt  {
 	height: 200px;
@@ -81,7 +96,7 @@ section {
 .section-ppt img {
 	position: absolute;
     width: 60%;
-    left: 5%;
+    left: 9%;
     margin-top: 17px;
 }
 
@@ -104,13 +119,23 @@ section {
 
 	.section-ppt span {
 	    font-size: 40em;
-		right: 3%;
+		right: 6%;
 		margin-top: -170px;
 	}
 
 	.section-ppt img {
 		width: 34%;
 	}
+}
+.esquema {
+	width: 80%;
+	text-align: center;
+	margin: 0 auto;
+	display: block;
+}
+.table {
+	width: 88%;
+    margin: 0 auto;
 }
 
 .part-2 .section-ppt img{
