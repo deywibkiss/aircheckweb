@@ -6,6 +6,8 @@
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
 	<script type="text/javascript" src="js/flot/jquery.flot.js"></script>
 	<script language="javascript" type="text/javascript" src="js/flot/jquery.flot.categories.js"></script>
+	<script language="javascript" type="text/javascript" src="js/flot/jquery.flot.time.js"></script>
+	<script language="javascript" type="text/javascript" src="js/flot/jquery.flot.selection.js"></script>
 
 
 	
@@ -162,6 +164,11 @@ input[type=checkbox] {
 		<div class="demo-container">
 			<div id="placeholder" class="demo-placeholder"></div>
 		</div>
+
+		<div class="demo-container">
+			<div id="placeholder2" class="demo-placeholder"></div>
+		</div>
+
 <script type="text/javascript">
 
 	$(function() { 
@@ -181,7 +188,50 @@ input[type=checkbox] {
 		});
 
 
+		var request = $.ajax({
+		  url: "http://aircheck.cloudapp.net:8080/report",
+		  method: "GET",
+		  dataType: "json"
+		});
+		 
+		request.done(function( json ) {
+		  pintar2(json)
+		});
+		 
+		request.fail(function( jqXHR, textStatus ) {
+		  alert( "Request failed: " + textStatus );
+		});
+
+
 		function pintar(json){
+
+
+			result = [];
+			for (var i = json.length - 1; i >= 0; i--) {
+				
+				var a = [ json[i]['subtype'], json[i]['count'] ]; 
+				result.push(a);
+			}
+
+			var data = [ ["January", 10], ["February", 8], ["March", 4], ["April", 13], ["May", 17], ["June", 9] ];
+			console.log(result);
+
+			$.plot("#placeholder", [ result ], {
+				series: {
+					bars: {
+						show: true,
+						barWidth: 0.6,
+						align: "center"
+					}
+				},
+				xaxis: {
+					mode: "categories",
+					tickLength: 0
+				}
+			});
+		}
+
+		function pintar2(json){
 
 
 			result = [];
